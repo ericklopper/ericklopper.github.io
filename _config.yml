@@ -1,0 +1,39 @@
+name: Torr not Tor
+description: InfoSec - Blog
+author: Eric Torr Klopper
+author_email: erictklopper@gmail.com
+
+safe: false
+auto: false
+base-url: /
+url: https://ericklopper.github.io
+
+source: .
+destination: ./_site
+plugins_dir: ./_plugins
+
+theme: jekyll-theme-midnight
+future: true
+lsi: false
+highlighter: false
+markdown: kramdown
+permalink: date
+
+rdiscount:
+  extensions: []
+
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  syntax_highlighter_opts:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+  
