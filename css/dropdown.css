@@ -1,0 +1,43 @@
+.pickprize {
+  background-color: rgba(255, 128, 0, 0.5);
+  color: white;
+  padding: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(177, 134, 94, 0.95);
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content option {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+}
+
+.dropdown-content option:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

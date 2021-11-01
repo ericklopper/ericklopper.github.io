@@ -1,0 +1,280 @@
+/* Import */
+
+/* -- Google Font Imports
+ * family=Open+Sans wght@300;400
+ * family=Quicksand wght@300;500
+ * family=Raleway wght@100;200;300;400
+ * family=Roboto wght@100;300
+ * family=Zen+Kurenaido
+ * family=Poiret+One 
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poiret+One&family=Quicksand:wght@300;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@100;300&family=Zen+Kurenaido&display=swap');
+/* ------------------------------------------------------------ */
+
+/* Variables */
+
+:root {
+    --primary-color: #42403E;
+    --secondary-color: #2564DA;
+    --navbarcolor: #DA9B25;
+    --accent-color: #68BA84;
+    --offwhite-color: #F8F8F8;
+    --white-color: #FFFFFF;
+    --text-color: #939393;
+    --font-main: "Roboto" "Open Sans";
+    --font-hd: "Poiret One";
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Global */
+
+/* Margin and Padding set to 0 so page covers full screen */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: interit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-image: url("../img/koningsuikerbos.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--primary-color)
+}
+
+h1 {
+    font-family: var(--font-hd);
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 33px;
+    line-height: 45px;
+    letter-spacing: 0;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-semibold);
+}
+
+p {
+    font-size: 3rem;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: var(--text-color);
+    font-weight: var(--font-weight-light);
+}
+
+/*
+hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+*/
+
+/* ------------------------------------------------------------ */
+
+/* Navigation Start */
+
+#navbar {
+    color: var(--offwhite-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    color: var(var(--offwhite-color));
+    font-family: "Quicksand";
+    text-transform: lowercase;
+    padding: 5px 5px 5px 5px;
+}
+
+.navspace {
+    display: flex;
+    margin-right: 2rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.navspace a {
+    display: block;
+    font-size: 1.7rem;
+    padding: 0.8rem;
+    color: var(--offwhite-color);
+    text-decoration: none;
+}
+
+.navspace a:hover {
+    color: var(--navbarcolor);
+    border-bottom: 1px solid var(--navbarcolor);
+    border-radius: 0px;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Welcome Start */
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#welcome-block h1 {
+    font-family: var(--font-hd);
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section p {
+    width: 75%;
+    font-family: "Roboto";
+    font-size: 1.20rem;
+    text-transform: lowercase;
+    color: var(--offwhite-color);
+    text-align: center;
+    justify-content: center;
+}
+
+#welcome-section #welcome-block {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(37, 37, 37, 0.603), rgba(37, 37, 37, 0.603));
+    border-radius: 4px;
+    margin: 10px 0px 10px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    display: block;
+    width: 40%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 0.002rem;
+    border-color: rgba(255, 166, 0, 0.5);
+}
+
+/* ------------------------------------------------------------ */
+
+/* Projects Start */
+
+#projects {
+    background-color: rgba(255, 166, 0, 0.6);
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+#projects h2 {
+    font-family: "Raleway";
+    color: var(--offwhite-color);
+    font-size: 1.8rem;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+#projects hr {
+    display: block;
+    width: 40%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 0.002rem;
+    border-color: rgba(4, 0, 255, 0.5);
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 3rem;
+}
+
+.project {
+    background: var(--offwhite-color);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.project-blk {
+    background-color: var(--primary-color);
+}
+
+.projects-img {
+    height: auto;
+    min-height: 15vh;
+    width: 100%;
+    object-fit: scaled-down;
+}
+
+.project-title {
+    font-size: 1rem;
+    padding: 2rem 0.5rem;
+    font-family: "Quicksand";
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--primary-color);
+    text-transform: lowercase;
+}
+
+.project-tile a {
+    text-decoration: none;
+}
+
+.project-title:hover {
+    color: blue;
+}
+
+/* ------------------------------------------------------------ */
+
+#contact {
+    background-color: yellow;
+    height: 50vh;
+}
+
+/* ------------------------------------------------------------ */
