@@ -1,0 +1,87 @@
+<!DOCTYPE=html5>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  </head>
+<!--  ------------------------------------------------------------------------------  -->
+  <body>
+    <div class="wrapper">
+    <header>
+      <div class="container-header">
+        <h1>The Hunger Games - Competition Survey</h1>
+        <p>
+          The thirteenth Hunger Games is coming up. Fill in our survey and see if you can win BIG BIG BIG by being the most spot on with your selection!!!! <br><br>Join now! Play the Game! ENTER AND YOU COULD WIN!!!
+        </p>
+
+      </div>
+    </header>
+<!--  ------------------------------------------------------------------------------  -->
+    <div class="main">
+    <form class="survey-form">
+<!--  ------------------------------------------------------------------------------  -->
+    <fieldset class="section-registration">
+        <legend class="lgnd">Registration</legend>
+        <p class="regdesc">
+          Enter your personal information, plus your choice of prize, to enter the competition. Don't forget to leave a note for all your fellow contestants out there.
+        </p>
+        
+        <div class="regleft">
+          <label for="name" id="name-label"><input type="text" id="name" placeholder="Name and Surname" required><br>Enter your Name and Surname:</label><br>
+          <label for="email" id="email-label"><input type="text" id="email" placeholder="Email Address" required><br>Enter your email address:</label><br>
+          <label for="number" id="number-label"><input type="text" id="number" placeholder="Age" required><br>Enter your Age:</label><br>
+        </div>
+        <div class="regright">
+        <input id="note" type="textarea" placeholder="Shout Out Now!!!!" required>
+        <div class="dropdown">
+          <button class="pickprize">Select Your Prize Here</button>
+          <div class="dropdown-content">
+            <option value="5kgrice">5 Kilos of Rice</option>
+            <option value="royalbreath">Take a Royal Breath</option>
+            <option value="hotbath">A hot water Bath</option>
+            <option value="hungercontestant">Join the Hunger Hunt</option>
+          </div>
+        </div>
+      </div>
+      </fieldset>
+<!--  ------------------------------------------------------------------------------  -->
+      <fieldset class="section-comp">
+        <legend class="lgnd">Competiton Time</legend>
+        <div class="cmpdesc">Make your choice of who will win, and which weapons they will use for the killing.</div>
+        <div class="cmpleft">
+          <p>The Winning District:</p>
+        <label for="dist1"><input id="dist1" type="radio" name="district-wins" value="District 1"> District 1</label>
+        <label for="dist2"><input id="dist2" type="radio" name="district-wins" value="District 2"> District 2</label><br>
+        <label for="dist3"><input id="dist3" type="radio" name="district-wins" value="District 3"> District 3</label>
+        <label for="dist4"><input id="dist4" type="radio" name="district-wins" value="District 4"> District 4</label><br>
+        <label for="dist5"><input id="dist5" type="radio" name="district-wins" value="District 5"> District 5</label>
+        <label for="dist6"><input id="dist6" type="radio" name="district-wins" value="District 6"> District 6</label><br>
+        </div>
+        <div class="cmpright">
+          <h3>The Killing Tools:</h3>
+          <p>Multiple choices allowed.</p>
+        <br>
+        <label for="bowarrow"><input id="bowarrow" type="checkbox" name="weapons" value="Bow and Arrow"> Bow and Arrow</label>
+        <label for="crossbow"><input id="crossbow" type="checkbox" name="weapons" value="Crossbow"> Crossbow</label>
+        <label for="knife"><input id="knife" type="checkbox" name="weapons" value="Knife"> Knife</label><br>
+        <label for="mace"><input id="mace" type="checkbox" name="weapons" value="Mace"> Mace</label>
+        <label for="machete"><input id="machete" type="checkbox" name="weapons" value="Machete"> Machete</label>
+        <label for="sickle"><input id="sickle" type="checkbox" name="weapons" value="Sickle"> Sickle</label><br>
+        <label for="spear"><input id="spear" type="checkbox" name="weapons" value="Spear"> Spear</label>
+        <label for="sword"><input id="sword" type="checkbox" name="weapons" value="Sword"> Sword</label>
+        <label for="trident"><input id="trident" type="checkbox" name="weapons" value="Trident"> Trident</label><br>
+        </div>
+      </fieldset>
+<!--  ------------------------------------------------------------------------------  -->
+    </form>
+
+  </div>
+<!--  ------------------------------------------------------------------------------  -->
+    <footer>
+      
+    </footer>
+<!--  ------------------------------------------------------------------------------  -->
+    </div>
+  </body>
+</html>

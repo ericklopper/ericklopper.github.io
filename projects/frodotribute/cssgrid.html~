@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style>
+    </style>
+    <main>
+      <header>
+        Header Data
+      </header>
+      <image>
+        Image of Frodo tree tops
+      </image>
+      <aside>
+        List of other adventurers (Dwarves)
+      </aside>
+      <content>
+      </content>
+      <footer>
+       Footer info
+      </footer>
+    </main>
+  </body>
+</html>

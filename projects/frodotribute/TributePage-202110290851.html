@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carattere&family=Playball&family=Poiret+One&family=Quicksand&family=Raleway:ital,wght@0,100;0,400;1,100&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .wrapper {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        display: grid;
+        grid-row-gap: 10px;
+      }
+      #main {
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: 100px auto auto 50px;
+        grid-template-areas: "hd hd hd"
+                             "img img img"
+                             "cont cont cont"
+                             "footer footer footer"
+                             ;
+        font-family: sans-serif;
+      }
+      header {
+        background: #FFF;
+        grid-area: hd;
+        font-family: Raleway;
+        color: #494949;
+        padding: 3;
+        margin: 3;
+        margin-bottom: 20;
+
+      }
+      header #title {
+        font-family: "Tangerine";
+        font-size: 40px;
+        margin: 0;
+        padding: 3;
+        line-height: 0.7;
+      }
+      header .subtitle {
+        font-family: "Poiret One";
+        font-size: 16px;
+        margin: 0;
+        line-height: 0.1
+      }
+      header hr {
+        color: #FFF;
+      }
+      header #tribute-info {
+        font-size: 15px;
+        color: #7F7F7F;
+      }
+      #img-div {
+        background: #FFF;
+        grid-area: img;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #image {
+        width: 90%;
+        object-fit: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+
+      }
+      #img-caption {
+        display: table;
+        margin: auto;
+        font-family: "Raleway";
+        font-size: 14px;
+        background: #f2f3f4;
+        padding: 5px 20px 5px 20px;
+
+      }
+      .aside {
+        background: #FFF;
+        grid-area: aside;
+
+      }
+      #navbar {
+        width: 100%;
+        padding: 2px 2px 2px 2px;
+        font-family: sans-serif;
+        font-size: 0.8em;
+        color: #1d1d1d;
+
+      }
+      nav h4 {
+        font-size: 1.2em;
+
+      }
+      nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+      }
+      nav il {
+    display: inline;
+    margin-right: 20px;
+      }
+      content {
+        background: #FFF;
+        grid-area: cont;
+        margin: auto;
+        font-family: "Raleway"
+      }
+      cont h4 {
+        font-size: 1em;
+        font-family: "Poiret One";
+        margin: auto;
+
+      }
+      cont ul {
+        margin: auto;
+        padding: 5px 0px 5px 30px;
+        font-size: 0.8em;
+      }
+      cont il {
+        display: inline;
+        margin: auto;
+      }
+      cont p {
+        font-family: "Raleway";
+        font-size: 1em;
+        width: 70%;
+        margin: auto;
+      }
+
+      .footer {
+        grid-area: footer;
+        font-size: 10px;
+      }
+      #tribute-link {
+        font-size: 1.2em;
+        font-family: "Raleway";
+        color: #004225;
+        text-decoration: none;
+      }
+      #tribute-link a:link {
+        text-decoration: none;
+      }
+    </style>
+    <div class="wrapper">
+    <div id="main"> <!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
+      <header>
+        <hr>
+        <h3 id="title">There and Back Again....</h3><br><!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
+          <h4 class="subtitle">&nbsp &nbsp &nbsp or How a Hobbit went adventuring and faced a dragon</h4><hr>
+            <center id="tribute-info">A tribute to Bilbo Baggins of the Shire</center><br>
+      </header>
+      <div id="img-div">
+        <img src="https://static.wikia.nocookie.net/lotr/images/6/61/Bilbo_&_Butterflies.jpg/revision/latest?cb=20210628013355" id="image"><br>
+        <div id="img-caption">Frodo enjoying the sun above the Mirkwood canopy</div>
+      </div>
+      <content class="cont">
+        <h4>A Hobbit's History</h4>
+        <ul>
+          <li>Early years</li>
+          <p> Born in the Third Age to Bungo Baggins, and Belladonna Took, Bilbo's early years, up until his 50th birthday, was spent enjoying life in the Shire, hunting birds and squirells with his paticularly excellent rock throwing skills, and waiting for news of the outside world to come his way in the form of the wizard, Gandhalf.</p>
+          <li>An unexpected journey</li>
+          <p>Following his 50th birthday, and against his better judgement, Bilbo left the Shire along with Gandalf the wizard, and a troop of thirteen Dwarves, on the Quest of Erebor, with the intent of returning control of the Lonely Mountain to the hands of the dwarves, and out of the claws of its current inhabitant, Smaug the dragon.</p>
+          <li>Three trolls</li>
+          <p>After the dwarves were captured by three Stone-trolls, named Tom, Bert, and William, and made ready for the pot, Bilbo was helpless to save them, but fortunately Gandalf the wizard had returned and kept the trolls busy until sunrise, which of course led to the trolls, whos great weakness was the sun, turning to stone statues.
+            <br><br>
+          When Bilbo, who was quite the accomplished thief, searched the trolls belongins he found an elven dagger that he kept form himself, a dagger he would later name 'Sting'</p>
+          <li>First visit to Rvendell</li>
+          <p>It was at this time that the company came to the Elvish kingdom, Rivendell, with Bilbo becoming enchanted with the Elves, and their Elvish ways. Lord Elrond of the Elves, assisted the group with reading a map that they had found, which spoke of a side entrence to Eredor, one that would not be controlled by Smaug.</p>
+          <li>A ring and A Gollum</li>
+          <p>While hiding in a cave from giants the company was captured by goblins, and taken to Goblin town, with Bilbo lost in the darkness during their escape. Lost in the darkness Bilbo stumbled about and, totaly by chance, found, and pocketed, a gold ring that, once on a finger, would make the wearer invisible, a ring that turned out to be the One Ring forged by Sauron. It was at this time that Bilbo met the unfortunate creature known as Gollum, a wretched thing, once a Hobbit, but twised and corrupted.</p>
+          <li>Mirkwood</li>
+          <p>The company travelled on and reached the Mirkwood, a dark forest, filled with giant spiders that could swallow a man whole, who as it was, wondered of the path and was captured by the spiders, with Bilbo saving the companions.</p>
+          <li>Smaug</li>
+          <p>Bilbo went into the liar of Smaug, the dragon, alone, believing the dragon to be asleep, with the dwarves waiting outside for him to return, but found the dragon quite awake and aware of his presence, with Bilbo only avoiding certain death by putting on the ring of invisibility. Stealing a cup from Smaug's treasure enraged the dragon to such an extent that Smaug flew from the cave straight to the Lake-Town where a Bard shot a single Black Arrow into the heart of the dragon, killing it instantly.</p>
+          <li>Five Armies Battle</li>
+          <p>The dwarves had reclaimed the mountain following the death of Smaug, as well as claiming all the treasures therein, but surviing men of Lake-Town as well as the Elven King's army marched to the mountain to take back their stolen treasure. The dwarves were joined by the dwarves of the Iron Hills to fight alongside the dwarves of the company, but after the mountain was attacked by a massive army of Goblins, all four armies, the dwarves of Erebor, dwarves of the Iron Mountain, Elves, and men of the Lake-Town were forced to work together to survive, and eventually beat the Goblins. Following the battle Bilbo returned to his beloved Shire.</p>
+          <li>Leaving the Shire</li>
+          <p>Bilbo spent many, many years in the Shire and after seeing more that 120 birthdays, much older than a Hobbit would normaly get, he left the Shire for the last time, returning to the Elvin kingdom, Rivendell, where he would live in peace until he would make the journey from Middle Earth.</p>
+          <li>Leaving Middle-Earth</li>
+          <p>We do not know what finally happened to Bilbo Baggins, the brave Hobbit who has such great adventures, but we do know that, following his 131st birtday, he along with Frodo Baggins, Gandalf, Elrond, and Galadriel, set sail for the Grey Havens to live out the remainder of their days, far away from the hands and eyes of man and hobbit alike.</p>
+        </ul>
+
+      </content>
+      <div class="footer">
+       Having used, heavily, content and references from the Lord of the Rings Fandom webpage to complete this project, I would thank them, and ask that if the reader wishes more information around Bilbo's great adventure, they should visit the Most Excellent <a href="https://lotr.fandom.com/wiki/Bilbo_Baggins" id="tribute-link" target="_blank">Bilbo Baggins</a> page.
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

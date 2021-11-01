@@ -1,0 +1,232 @@
+/* ======================
+Table of Contents
+1. Imports
+2. Global Style
+3. Typography
+4. Layout
+5. Header
+6. Components
+7. Buttons
+8. Section One
+9. Section Two
+10. Footer
+====================== */
+
+/* == Imports == */
+
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Playball&family=Poiret+One&family=Quicksand&family=Raleway:ital,wght@0,100;0,400;1,100&family=Tangerine:wght@400;700&display=swap');
+/* == Global Style == */
+
+body {
+  position: relative;
+  background-color: darkgray;
+  background: linear-gradient(rgba(0, 0, 26, 0.8), rgba(0, 0, 26, 0.8)), url('https://images5.fanpop.com/image/photos/31100000/The-Hunger-Games-Promotional-Poster-tribute-arena-31116909-1524-2339.jpg');
+}
+
+h1 {
+  justify-self: auto;
+  font-family: 'Playball';
+  font-size: 2.5rem;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: orange;
+}
+
+/* == Typography == */
+
+.blockstl {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 26, 0.9), rgba(0, 0, 26, 0.9));
+  border: 0.5px solid orange;
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+.txtblkreg {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.txtblklblreg {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.txtarea {
+  margin-bottom: 20px;
+  background-color: rgba(226, 147, 0, 0.5);
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 2px 2px 2px 2px;
+}
+
+/* == Layout == */
+
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto auto;
+  position: relative;
+  font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.main {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 0px 10px 0px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* == Header == */
+
+.container-header {
+  position: relative;
+  width: auto;
+  padding: 20px 0px 0px 20px;
+  text-align: center;
+}
+
+/* == Components == */
+
+/* == Buttons == */
+
+/* ======================
+Section One
+====================== */
+
+.lgnd {
+  font-size: 1em;
+  padding: 10px 12px 10px 12px;
+}
+
+.regdesc {
+  font-size: 0.87rem;
+  vertical-align: top;
+  align-content: top;
+  margin: 0px 5px 10px 5px;
+  width: 100%;
+}
+
+.regleft {
+  margin: 0px 5px 10px 5px;
+}
+
+.regright {
+  margin: 0px 5px 0px 5px;
+}
+
+.hd3 {
+  font-size: 0.95em;
+  font-family: 'Raleway';
+  vertical-align: text-bottom;
+}
+
+/*
+#email-label {
+  font-size: 0.85rem;
+}
+#email {
+  width: 90%;
+}
+#number-label {
+  font-size: 0.85rem;
+}
+#number {
+  width: 90%;
+}
+#name-label {
+  font-size: 0.85rem;
+} */
+
+#name {
+  color: red;
+}
+
+/*
+#prizechoice {
+}
+*/
+
+display: block;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+margin-left: auto;
+margin-right: auto;
+border-style: inset;
+border-width: 1px;
+V
+/* ======================
+Section Two
+====================== */
+
+.section-comp {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'cd cd' 'cl cr';
+  background: linear-gradient(rgba(0, 0, 26, 0.9), rgba(0, 0, 26, 0.9));
+  border: 1px solid orange;
+  border-radius: 10px;
+}
+
+.cmpdesc {
+  grid-area: cd;
+  padding: 5px 5px 5px 5px;
+}
+
+.distwin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  padding: 5px 5px 5px 5px;
+}
+
+.distopt {
+  background-color: green;
+  width: 50%;
+}
+
+.cmpright {
+  grid-area: cr;
+  padding: 5px 5px 5px 5px;
+}
+
+/* ======================
+Footer
+====================== */
+
+/* ----------Header Section---------- */
+
+/* ----------Start Main---------- */
+
+.topdiv {
+  opacity: 1;
+}
+
+/* ----------Registration Section---------- */
+
+/* ----------Compentition Section---------- */
+
+/* ----------Footer Section---------- */
+
+footer {}

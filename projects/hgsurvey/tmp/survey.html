@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Playball&family=Poiret+One&family=Quicksand&family=Raleway:ital,wght@0,100;0,400;1,100&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            background-color: darkgray;
+            background: linear-gradient(rgba(0, 0, 26, .8), rgba(0, 0, 26, .8)), url('https://images5.fanpop.com/image/photos/31100000/The-Hunger-Games-Promotional-Poster-tribute-arena-31116909-1524-2339.jpg');
+        }
+        
+        .wrapper {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            font-family: "Raleway", 'Arial Narrow', Arial, sans-serif;
+            color: whitesmoke;
+        }
+        
+        .main {
+            position: relative;
+            height: auto;
+            width: 100%;
+            margin: 0px 10px 0px 10px;
+            top: 0;
+            border: 10px;
+            border-color: orange;
+        }
+        
+        .backimg {
+            padding: 10px 10px 10px 10px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .topdiv {
+            opacity: 1.0;
+        }
+        
+        h1 {
+            justify-self: auto;
+        }
+        
+        .persnfo {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "pit pin" "pic pin" "pic pid";
+            background: linear-gradient(rgba(153, 153, 255, .5), rgba(153, 153, 255, .5));
+            padding: 10px 10px 10px 10px;
+        }
+        
+        .persttl {
+            grid-area: pit;
+        }
+        
+        .persclt {
+            grid-area: pic;
+        }
+        
+        .persnote {
+            grid-area: pin;
+            width: auto;
+            display: flex;
+            display: -webkit-flex;
+        }
+        
+        #note {
+            padding: 0 20px;
+            width: auto;
+            height: auto;
+            line-height: 30px;
+            outline: none;
+            background-color: #dfd4d7;
+        }
+        
+        .persdesc {
+            grid-area: pid;
+        }
+        
+        .cmpntry {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "pit pin" "pic pid" "pic pid";
+            background: linear-gradient(rgba(153, 153, 255, .5), rgba(153, 153, 255, .5));
+            padding: 10px 10px 10px 10px;
+        }
+        
+        .cmpttl {
+            background-color: rebeccapurple;
+            grid-area: pit;
+        }
+        
+        .cmpnote {
+            grid-area: ;
+        }
+        
+        .cmp
+    </style>
+    <div class="wrapper">
+        <div class="main">
+            <div class="topdiv">
+                <h1 id="title">The Hunger Games - Competition Survey</h1><br>
+                <p id="description">The thirteenth Hunger Games is coming up. Fill in our survey and see if you can win BIG BIG BIG by being the most spot on with your selection!!!!</p>
+                <p>Join now! Play the Game! ENTER AND YOU COULD WIN!!!</p>
+            </div>
+            <div>
+                <form id="survey-form">
+                    <div class="persnfo">
+                        <h2 class="persttl">Registration:</h2>
+                        <div class="persclt">
+                            <label for="name" id="name-label"><input type="text" id="name" placeholder="Name and Surname" required><br>Enter your Name and Surname:</label><br>
+                            <label for="email" id="email-label"><input type="text" id="email" placeholder="Email Address" required><br>Enter your email address:</label><br>
+                            <label for="number" id="number-label"><input type="text" id="number" placeholder="Age" required><br>Enter your Age:</label><br>
+                            <select name="Icecream Flavours">
+                          <option value="double chocolate">Double Chocolate</option>
+                          <option value="vanilla">Vanilla</option>
+                          <option value="strawberry" selected>Strawberry</option>
+                          <option value="caramel">Caramel</option>
+                        </select>
+                        </div>
+                        <div class="persnote">
+                            <input id="note" type="text" placeholder="Shout Out Now!!!!" required>
+                        </div>
+                        <div id="persdesc">
+                            Enter your personal details, choose your prize, and watch the Hunger Games to see if you are a winner!
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="cmpntry">
+                        <div id="cmpttl">Competiton Entry</div>
+                        <label for="number" id="number-label"><input type="text" id="number" placeholder="Hunger Games Runnig Time" required><br>Running Time</label><br>
+                        <label for="dist1"><input id="dist1" type="radio" name="district-wins" value="District 1"> District 1</label>
+                        <label for="dist2"><input id="dist2" type="radio" name="district-wins" value="District 2"> District 2</label><br>
+                        <label for="dist3"><input id="dist3" type="radio" name="district-wins" value="District 3"> District 3</label>
+                        <label for="dist4"><input id="dist4" type="radio" name="district-wins" value="District 4"> District 4</label><br>
+                        <label for="dist5"><input id="dist5" type="radio" name="district-wins" value="District 5"> District 5</label>
+                        <label for="dist6"><input id="dist6" type="radio" name="district-wins" value="District 6"> District 6</label><br>
+                        <label for="dist7"><input id="dist7" type="radio" name="district-wins" value="District 7"> District 7</label>
+                        <label for="dist8"><input id="dist8" type="radio" name="district-wins" value="District 8"> District 8</label><br>
+                        <label for="dist9"><input id="dist9" type="radio" name="district-wins" value="District 9"> District 9</label>
+                        <label for="dist10"><input id="dist10" type="radio" name="district-wins" value="District 10"> District 10</label><br>
+                        <label for="dist11"><input id="dist11" type="radio" name="district-wins" value="District 11"> District 11</label>
+                        <label for="dist12"><input id="dist12" type="radio" name="district-wins" value="District 12"> District 12</label><br>
+                        <br>
+
+                        <label for="bowarrow"><input id="bowarrow" type="checkbox" name="weapons" value="Bow and Arrow"> Bow and Arrow</label>
+                        <label for="crossbow"><input id="crossbow" type="checkbox" name="weapons" value="Crossbow"> Crossbow</label>
+                        <label for="knife"><input id="knife" type="checkbox" name="weapons" value="Knife"> Knife</label><br>
+                        <label for="mace"><input id="mace" type="checkbox" name="weapons" value="Mace"> Mace</label>
+                        <label for="machete"><input id="machete" type="checkbox" name="weapons" value="Machete"> Machete</label>
+                        <label for="sickle"><input id="sickle" type="checkbox" name="weapons" value="Sickle"> Sickle</label><br>
+                        <label for="spear"><input id="spear" type="checkbox" name="weapons" value="Spear"> Spear</label>
+                        <label for="sword"><input id="sword" type="checkbox" name="weapons" value="Sword"> Sword</label>
+                        <label for="trident"><input id="trident" type="checkbox" name="weapons" value="Trident"> Trident</label><br>
+                    </div>
+                    <div>
+
+                    </div>
+
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

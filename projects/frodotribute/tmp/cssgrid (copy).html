@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <style>
+      .wrapper {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+        display: grid;
+        grid-row-gap: 10px;
+      }
+      .main {
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: 100px 300px auto 50px;
+        grid-template-areas: "hd hd hd"
+                             "img img img"
+                             "aside cont cont"
+                             "footer footer footer"
+                             ;
+        font-family: sans-serif;
+      }
+      .header {
+        background: #FFF;
+        grid-area: hd;
+        font-family: raleway;
+        color: #626262;
+
+      }
+      .imagearea {
+        background: #FFF;
+        grid-area: img;
+
+      }
+      #image {
+        width: 100%;
+        object-fit: contain;
+        
+      }
+      .aside {
+        background: #fa1751;
+        grid-area: aside;
+
+      }
+      #navbar {
+        width: 100%;
+
+      }
+      nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+      }
+      nav il {
+    display: inline;
+    margin-right: 20px;
+      }
+      .content {
+        background: #851751;
+        grid-area: cont;
+
+      }
+      .footer {
+        background: #dede51;
+        grid-area: footer;
+      }
+    </style>
+    <div class="wrapper">
+    <div class="main">
+      <div class="header">
+        There and Back Again....<br>
+          or How a halfling went adventuring and faced a dragon
+        <hr>
+      </div>
+      <div class="imagearea">
+        <img src="https://static.wikia.nocookie.net/lotr/images/6/61/Bilbo_&_Butterflies.jpg/revision/latest?cb=20210628013355" id="image"><br>
+        Image of Frodo tree tops
+      </div>
+      <div class="aside">
+            <div class="panel">
+        <h4>Chapter listing</h4>
+        <nav id="navbar">
+        <ul>
+          <li><a href="#">The Dawn of Aeronautics</a></li>
+          <li><a href="#">The Invention of the Balloon</a></li>
+          <li><a href="#">The First Balloon Ascent in England</a></li>
+          <li><a href="#">The Development of Balloon Philosophy</a></li>
+          <li><a href="#">Some Famous Early Voyagers</a></li>
+          <li><a href="#">Charles Green and the Nassau Balloon</a></li>
+          <li><a href="#">John Wise - The American Aeronaut</a></li>
+          <li><a href="#">The Balloon in the Service of Science</a></li>
+          <li><a href="#">Some Noteworthy Ascents</a></li>
+          <li><a href="#">The Highest Ascent on Record</a></li>
+        </ul>
+      </nav>
+    </div>
+      </div>
+      <div class="content">
+        This is content
+      </div>
+      <div class="footer">
+       Footer info
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

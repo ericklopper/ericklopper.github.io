@@ -1,0 +1,24 @@
+.sb-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    background: #e20d5c;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 0.8rem;
+    color: white;
+    box-shadow: 0.25rem 0.25rem 0.5rem slategray;
+}
+
+input {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #e20d5c;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}

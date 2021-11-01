@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style>
+      main {
+        font-family: f;
+        f
+      }
+    </style>
+<main id="main">
+  <h2 id="title">
+    Bilbo Baggins, an Extra Ordinary Halfling
+  </h2>
+  <div id="img-div">
+    <img src="https://static.wikia.nocookie.net/lotr/images/b/b6/The_Hobbit_wallpaper_48.jpg/revision/latest?cb=20131112182330" id="image">
+    <p id="img-caption">
+      A young Bilbo Baggins standing with his travel pack
+    </p>
+  </div>
+  <p id="tribute-info">
+    This is a tribute page to a bold Halfling adventurer, that travelled further, and had greater adventures, than any other Hobbit before him.
+  </p>
+  <ul>
+    <li>Early life</li>
+    <li>An independent Hobbit of means</li>
+    <li>Adventure calls</li>
+    <li>The last adventure</li>
+  </ul>
+  <p>Read more about the life and times of <a href="https://lotr.fandom.com/wiki/Bilbo_Baggins" id="tribute-link" target="_blank">Bilbo Baggins</a> a brave and kind hearted Hobbit.
+  </p>
+</main>
+  </body>
+</html>
+
+<!--
+# Tribute Page tests
+
+# Technology Stack
+1. Use HTML, and Plain CSS to complete this project. 
+
+# Content
+1. Yes: My tribute page should have an element with corresponding id="main", which contains all other elements.
+2. Yes: I should see an element with corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug").
+3. Yes: I should see either a <figure> or <div> element with corresponding id="img-div".
+
+4. Within the "img-div" element, I should see an <img> element with a corresponding id="image".
+5. Within the "img-div" element, I should see either a <figcaption> or <div> element with a corresponding id="img-caption" that contains textual content describing the image shown in "img-div".
+6. I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page.
+7. I should see an <a> element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to "_blank" in order for your link to open in a new tab (i.e. target="_blank").
+
+# Layout
+1. The <img> element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+2. The <img> element should be centered within its parent element.
+-->
+
