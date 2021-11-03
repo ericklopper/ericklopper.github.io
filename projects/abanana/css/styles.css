@@ -1,15 +1,18 @@
 /* Import */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:wght@400;500&family=Fredoka+One&family=Montserrat:wght@100;200&family=Noto+Serif+Display:wght@100;300;500&family=Raleway:wght@100;300&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poiret+One&family=Quicksand:wght@300;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@100;300&family=Zen+Kurenaido&display=swap');
 /* Variables */
 
 :root {
-    --primary-color: #50330C;
+    --primary-color: #f5f5f5;
     --accent-color: #68BA84;
     --offwhite-color: #F8F8F8;
     --white-color: #FFFFFF;
-    --text-color: #939393;
-    --font-main: 'Poppins', sans-serif;
+    --text-color: #414141;
+    --mailbox-color: #3f3f3f;
+    --banana-color: #FFE135;
+    --bandrk-color: #746200;
+    --font-main: 'Raleway', sans-serif;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -18,7 +21,7 @@
 /* Global */
 
 * {
-    font-family: "Cinzel";
+    font-family: "Raleway";
 }
 
 /* Button */
@@ -49,6 +52,10 @@
 
 /* Typography */
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-main);
 }
@@ -62,10 +69,10 @@ h1 {
 }
 
 h2 {
-    font-size: 33px;
-    line-height: 45px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
     letter-spacing: 0;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -86,6 +93,166 @@ p {
     }
 }
 
-#header-img {
-    max-width: 40%;
+#header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    position: fixed;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--bandrk-color);
 }
+
+#header h2 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    letter-spacing: 0;
+    color: slategray;
+    font-weight: var(--font-weight-semibold);
+    margin-left: 2rem;
+    font-family: "Quicksand";
+}
+
+#header h3 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0;
+    color: slategray;
+    font-weight: var(--font-weight-semibold);
+    font-family: "Quicksand";
+}
+
+#header-img {
+    height: 2rem;
+}
+
+#nav-bar {
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    float: right;
+    margin-left: auto;
+}
+
+.navp {
+    margin: 1px;
+    font-size: 1rem;
+    color: var(--bandrk-color);
+}
+
+#nav-bar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+}
+
+#nav-bar a:hover {
+    border-bottom: 3px solid var(--banana-color);
+}
+
+#nav-bar a.active {
+    border-bottom: 3px solid var(--banana-color);
+}
+
+.nav-link {
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Spacer Start */
+
+.spacer {
+    height: 100px;
+}
+
+/* Spacer End */
+
+/* ------------------------------------------------------------ */
+
+/* Main Start */
+
+/* ------------------------------------------------------------ */
+
+/* Form Section Start */
+
+#form {
+    display: flex;
+    justify-content: center;
+}
+
+.emailblk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    background: var(--mailbox-color);
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 0.8rem;
+    color: var(--offwhite-color);
+    box-shadow: 0.25rem 0.25rem 0.5rem slategray;
+}
+
+.emailblk #email {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--mailbox-color);
+    color: var(--offwhite-color);
+}
+
+.emailblk #submit {
+    margin: 0 0.5rem 0 0.5rem;
+    width: auto;
+    border: none;
+    outline: none;
+    background: var(--mailbox-color);
+    color: var(--offwhite-color);
+}
+
+.prev {
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+::placeholder {
+    color: white;
+}
+
+/* Form Section End */
+
+/* ------------------------------------------------------------ */
+
+/* About Section Start */
+
+/* About Section End */
+
+/* ------------------------------------------------------------ */
+
+/* Howto Section Start */
+
+/* Howto Section End */
+
+/* ------------------------------------------------------------ */
+
+/* Cost Section Start */
+
+/* Cost Section End */
+
+/* ------------------------------------------------------------ */
+
+/* Contacts Section Start */
+
+/* Contacts Section End */
+
+/* ------------------------------------------------------------ */

@@ -227,39 +227,41 @@ hr {
 
 .project-tile {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-gap: 3rem;
 }
 
 .project {
-    background: var(--offwhite-color);
+    background: var(--primary-color);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
+    border-radius: 20px;
     width: 100%;
-    height: auto;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
+    border: 1px solid rgba(0, 0, 255, 0.438);
 }
 
 .project-blk {
     background-color: var(--primary-color);
 }
 
-.projects-img {
+.project .projects-img {
     height: auto;
     min-height: 15vh;
     width: 100%;
     object-fit: scaled-down;
+    border-radius: 20px;
 }
 
 .project-title {
     font-size: 1rem;
-    padding: 2rem 0.5rem;
+    padding: 1rem 0.5rem;
     font-family: "Quicksand";
     font-size: 1.5rem;
     font-weight: 400;
     background-color: var(--primary-color);
     text-transform: lowercase;
+    border-radius: 20px;
 }
 
 .project-tile a {
@@ -272,9 +274,20 @@ hr {
 
 /* ------------------------------------------------------------ */
 
-#contact {
-    background-color: yellow;
-    height: 50vh;
+/* Contacts Start */
+
+#contacts {
+    background-color: var(--primary-color);
+    height: 100px;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Footer Start */
+
+footer {
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
 /* ------------------------------------------------------------ */
