@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <head>
+        <title>
+            Technical Documentation
+        </title>
+        <!-- Link Style imports the main CSS stylesheet -->
+        <link rel="stylesheet" name="Style" type="text/css" href="css/styles.css" media="screen" />
+        <!-- Link SearchBar imports the CSS styling for a dropdown menu -->
+        <link rel="stylesheet" name="SearchBar" type="text/css" href="css/searchbar.css" media="screen" />
+        <!-- Link DropDown imports the CSS styling for a dropdown menu -->
+        <link rel="stylesheet" name="DropDown" type="text/css" href="css/dropdown.css" media="screen" />
+        <!-- Link PrintPage contains formating required to print the page to paper -->
+        <link rel="stylesheet" name="PrintPage" type="text/css" href="css/print.css" media="print" />
+        <!-- Link FontAwesome allows importing Icons from the FontAwesome webiste -->
+        <link rel="stylesheet" name="FontAwesome"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    </head>
+
+    <body>
+        <nav id="navbar" class="">
+            <header id="docuhead">Some Basic Linux Commands:</header>
+            <a href="#The_LS_Command" class="NavLS">the LS command</a>
+            <a href="#Searching" class="NavSearching">Searching</a>
+            <a href="#Storage" class="NavStorage">Storage</a>
+            <a href="#System_Status" class="NavSystemStatus">System Status</a>
+            <a href="#Communication" class="NavCommunication">Communication</a>
+
+        </nav>
+        <main id="main-doc">
+            <!--  The ls Command  ------------------------------------------------------------------------  -->
+            <section id="the_LS_command" class="main-section">
+                <h2>the LS command</h2>
+                <p>The ls command is used to list directory contents. See the examples of it usage below.</p>
+                <ul>
+                    <li>
+                        ls
+                        <br>List directory contents
+                        <pre class="code">
+
+┌──(kali㉿aBANANA)-[/]
+└─$ ls
+bin dev home initrd.img.old lib32 libx32 media opt root sbin sys usr vmlinuz
+boot etc initrd.img lib lib64 lost+found mnt proc run srv tmp var vmlinuz.old
+                    </pre>
+                    </li>
+                    <li>
+                        ls -a
+                        <br>List directory contents, inclduing hidden . files
+                        <pre class="code">
+
+┌──(kali㉿aBANANA)-[/]
+└─$ ls -a
+. boot etc initrd.img.old lib64 media proc sbin tmp vmlinuz
+.. .cache home lib libx32 mnt root srv usr vmlinuz.old
+bin dev initrd.img lib32 lost+found opt run sys var
+                    </pre>
+                    </li>
+                    <li>
+                        ls -l
+                        <br>Long list of directory contents
+                        <pre class="code">
+
+┌──(kali㉿aBANANA)-[/]
+└─$ ls -l
+total 68
+lrwxrwxrwx 1 root root 7 Sep 8 05:20 bin -> usr/bin
+drwxr-xr-x 3 root root 4096 Sep 8 05:45 boot
+drwxr-xr-x 17 root root 3380 Nov 6 04:50 dev
+drwxr-xr-x 154 root root 12288 Nov 6 06:45 etc
+drwxr-xr-x 4 root root 4096 Nov 6 04:40 home
+lrwxrwxrwx 1 root root 34 Sep 8 05:21 initrd.img -> boot/initrd.img-5.10.0-kali9-amd64
+lrwxrwxrwx 1 root root 34 Sep 8 05:21 initrd.img.old -> boot/initrd.img-5.10.0-kali9-amd64
+lrwxrwxrwx 1 root root 7 Sep 8 05:20 lib -> usr/lib
+lrwxrwxrwx 1 root root 9 Sep 8 05:20 lib32 -> usr/lib32
+lrwxrwxrwx 1 root root 9 Sep 8 05:20 lib64 -> usr/lib64
+lrwxrwxrwx 1 root root 10 Sep 8 05:20 libx32 -> usr/libx32
+drwx------ 2 root root 16384 Sep 8 05:20 lost+found
+drwxr-xr-x 3 root root 4096 Sep 8 05:20 media
+drwxr-xr-x 2 root root 4096 Sep 8 05:21 mnt
+drwxr-xr-x 3 root root 4096 Sep 8 05:28 opt
+dr-xr-xr-x 267 root root 0 Nov 6 04:40 proc
+drwx------ 3 root root 4096 Nov 6 04:37 root
+drwxr-xr-x 34 root root 820 Nov 6 04:41 run
+lrwxrwxrwx 1 root root 8 Sep 8 05:20 sbin -> usr/sbin
+drwxr-xr-x 3 root root 4096 Sep 8 05:28 srv
+dr-xr-xr-x 13 root root 0 Nov 6 04:40 sys
+drwxrwxrwt 15 root root 4096 Nov 6 06:55 tmp
+drwxr-xr-x 14 root root 4096 Sep 8 05:21 usr
+drwxr-xr-x 12 root root 4096 Sep 8 05:22 var
+lrwxrwxrwx 1 root root 31 Sep 8 05:21 vmlinuz -> boot/vmlinuz-5.10.0-kali9-amd64
+lrwxrwxrwx 1 root root 31 Sep 8 05:21 vmlinuz.old -> boot/vmlinuz-5.10.0-kali9-amd64
+                            </pre>
+                    </li>
+                </ul>
+                <!--  The ls Command  ---------------------------------------------------------------------END  -->
+
+                <!--  The ln Command  -------------------------------------------------------------------BEGIN  -->
+                <h3>The ln Command</h3>
+                <p>The ln command is used to create links between files. See the examples of its usage below:</p>
+                <ul>
+                    <li>
+                        ln -s
+                        <br>Creates a symbolic(soft) link(pointer) to a file. If the file is deleted the link stops
+                        working.
+                        <pre class="code">
+
+┌──(kali㉿aBANANA)-[~]
+└─$ ln -s Documents/myfile.txt .
+
+┌──(kali㉿aBANANA)-[~]
+└─$ ls -l myfile.txt
+lrwxrwxrwx 1 kali kali 20 Nov 6 06:51 myfile.txt -> Documents/myfile.txt
+
+┌──(kali㉿aBANANA)-[~]
+└─$ cat myfile.txt
+aBANANA
+
+┌──(kali㉿aBANANA)-[~]
+└─$ rm Documents/myfile.txt
+
+┌──(kali㉿aBANANA)-[~]
+└─$ cat myfile.txt
+cat: myfile.txt: No such file or directory
+
+┌──(kali㉿aBANANA)-[~]
+└─$
+                        </pre>
+                    </li>
+                    <li>
+                        ln -P file1.txt filetwo.txt
+                        <br>Make a hard link called 'filetwo.txt' to the underlying INODE entry for the file
+                        'file1.txt'. If 'file1.txt' is deleted, 'file2.txt' will still contiue working.
+                        <pre class="code">
+
+┌──(kali㉿aBANANA)-[/]
+└─$ touch tmp/myfile.txt
+
+┌──(kali㉿aBANANA)-[/]
+└─$ echo 'aBANANA' > tmp/myfile.txt
+
+┌──(kali㉿aBANANA)-[/]
+└─$ sudo ln -P tmp/myfile.txt . 
+[sudo] password for kali:
+
+┌──(kali㉿aBANANA)-[/]
+└─$ ls -l myfile.txt
+-rw-r--r-- 2 kali kali 8 Nov 6 07:05 myfile.txt
+
+┌──(kali㉿aBANANA)-[/]
+└─$ cat myfile.txt
+aBANANA
+
+┌──(kali㉿aBANANA)-[/]
+└─$ rm tmp/myfile.txt
+
+┌──(kali㉿aBANANA)-[/]
+└─$ cat myfile.txt
+aBANANA
+
+┌──(kali㉿aBANANA)-[/]
+└─$
+
+                        </pre>
+                    </li>
+                </ul>
+                <h3>mv</h3>
+                <h3>mkdir</h3>
+                <h3>rm</h3>
+                <h3>rmdir</h3>
+                <h3>chmod</h3>
+                <h3>chown</h3>
+                <h3>files</h3>
+            </section>
+
+            <!--
+
+            <section id="FileManagement" class="main-section">
+                <h2>File</h2>
+                <p>These commands can be used to search a linux environment for files, or search in files.</p>
+                <div>ls</div>
+                <div>ln</div>
+                <div>mv</div>
+                <div>mkdir</div>
+                <div>rm</div>
+                <div>rmdir</div>
+                <div>chmod</div>
+                <div>chown</div>
+                <div>files</div>
+            </section>
+            <section id="Searching" class="main-section">
+                <h2>Searching</h2>
+                <p>These commands can be used to search a linux environment for files, or search in files.</p>
+                <div>find</div>
+                <div>grep</div>
+                <div>locate</div>
+                <div>updatedb</div>
+                <div>whereis</div>
+                <div>whatis</div>
+                <div>which</div>
+            </section>
+            <section id="Storage" class="main-section">
+                <h2>Storage</h2>
+                <p>These commands are used in the compressing/decompressing, and archiving of files.</p>
+                <div>gzip</div>
+                <div>tar</div>
+                <div>bzip2</div>
+                <div>bunzip2</div>
+                <div>cpio</div>
+            </section>
+            <section id="System_Status" class="main-section">
+                <h2>System Status</h2>
+                <p>These commands are used for checking, and monitoring, system status.</p>
+                <div>df</div>
+                <div>du</div>
+                <div>free</div>
+                <div>hostname</div>
+                <div>ps</div>
+                <div>uname</div>
+            </section>
+            <section id="Communication" class="main-section">
+                <h2>Communication</h2>
+                <p>These commands are used for communication between systems.</p>
+                <div>dig</div>
+                <div>ftp</div>
+                <div>scp</div>
+                <div>ssh</div>
+            </section>
+            <section id="Searching_Within_Files" class="main-section">
+                <header>Searching Within Files</header>
+                <p>Searching Within Files
+                    Very often you will want to search through a number of files to find a particular word
+                    or phrase, for example, when a number of files contain lists of telephone numbers with
+                    people’s names and addresses. The command grep does a line-by-line search through
+                    a file and prints only those lines that contain a word that you have specified. grep has
+                    the command summary:</p>
+                <span class="code">grep [options] &lt;pattern&gt; &lt;filename&gt; [&lt;filename&gt; ...]</span>
+                <p>
+                    The words word, string, or pattern are used synonymously in this context, basically meaning a
+                    short
+                    length of letters and-or numbers that you are trying to find matches for. A pattern can also be
+                    a
+                    string with kinds of wildcards in it that match different characters, as we shall see later.</p>
+                <span class="code">grep -n &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Shows the line number in the file where the word was found.</p>
+                <span class="code">grep -&lt;num&gt; &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Prints out &lt;num&gt; of the lines that came before and after each of the lines in which the
+                    word
+                    was found.</p>
+                <span class="code">grep -A &lt;num&gt; &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Prints out &lt;num&gt; of the lines that came after each of the lines in which the word was
+                    found.
+                </p>
+                <span class="code">grep -B &lt;num&gt; &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Prints out &lt;num&gt; of the lines that came before each of the lines in which the word was
+                    found.
+                </p>
+                <span class="code">grep -v &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Prints out only those lines that do not contain the word you are searching for. & You may think
+                    that
+                    the -v option is no longer doing the same kind of thing that grep is advertised to do:
+                    i.e.,searching for strings.</p>
+                <p>In fact, UNIX commands often suffer from this—they have such versatility that their functionality
+                    often overlaps with that of other commands. One actually never stops learning new and nifty ways
+                    of
+                    doing things hidden in the dark corners of man pages.</p>
+                <span class="code">grep -i &lt;pattern&gt; &lt;filename&gt;</span>
+                <p>Does the same as an ordinary grep but is case insensitive.</p>
+            </section>
+            <section id="Archives_and_Backups" class="main-section">
+                <header>Archives and Backups</header>
+                <p>One of the primary activities of a system administrator is to make backups. It is essential never
+                    to
+                    underestimate the volatility &Ability to evaporate or become chaotic. - of information in a
+                    computer. Backups of data are therefore continually made. A backup is a duplicate of your files
+                    that
+                    can be used as a replacement should any or all of the computer be destroyed.</p>
+                <p>The idea is that all of the data in a directory &As usual, meaning a directory and all its
+                    subdirectories and all the files in those subdirectories, etc. - are stored in a separate
+                    place—often compressed—and can be retrieved in case of an emergency. When we want to store a
+                    number
+                    of files in this way, it is useful to be able to pack many files into one file so that we can
+                    perform operations on that single file only. When many files are packed together into one, this
+                    packed file is called an archive. Usually archives have the extension .tar, which stands for
+                    tape
+                    archive.</p>
+                <p>To create an archive of a directory, use the tar command:</p>
+                <span class="code">tar -c -f &lt;filename&gt; &lt;directory&gt;</span>
+                <p>Create a directory with a few files in it, and run the tar command to back it up. A file of
+                    &lt;filename&gt; will be created. Take careful note of any error messages that tar reports. List
+                    the
+                    file and check that its size is appropriate for the size of the directory you are archiving. You
+                    can
+                    also use the verify option (see the man page) of the tar command to check the integrity of
+                    &lt;filename&gt;.</p>
+                <p>Now remove the directory, and then restore it with the extract option of the tar command:</p>
+                <span class="code">tar -x -f &lt;filename&gt;</span>
+                <p>You should see your directory recreated with all its files intact. A nice option to give to tar
+                    is
+                    -v. This option lists all the files that are being added to or extracted from the archive as
+                    they
+                    are processed, and is useful for monitoring the progress of archiving.</p>
+
+            </section>
+            <section id="Section_Python" class="main-section">
+                <header>Section Python</header>
+                <p>Standard-afsnittet brugt siden 1500-tallet
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <li></li>
+                <code>
+
+                    </code>
+            </section>
+            <section id="Section_C" class="main-section">
+                <header>Section C</header>
+                <p>Afsnit 1.10.32 fra "de Finibus Bonorum et Malorum", skrevet af Cicero i 45 f.kr.
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium,
+                    totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                    explicabo.
+                    Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                    eos
+                    qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit,
+                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                    voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                    consequatur,
+                    vel illum qui dolorem
+                    eum fugiat quo voluptas nulla pariatur?"</p>
+                <li></li>
+                <code>
+
+</code>
+                <p>1914-oversættelsen af Rackham
+                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                    was
+                    born and I will give
+                    you a complete account of the system, and expound the actual teachings of the great explorer of
+                    the
+                    truth, the
+                    master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because
+                    it
+                    is pleasure, but
+                    because those who do not know how to pursue pleasure rationally encounter consequences that are
+                    extremely painful. Nor
+                    again is there anyone who loves or pursues or desires to obtain pain of itself, because it is
+                    pain,
+                    but because
+                    occasionally circumstances occur in which toil and pain can procure him some great pleasure. To
+                    take
+                    a trivial example,
+                    which of us ever undertakes laborious physical exercise, except to obtain some advantage from
+                    it?
+                    But who has any right
+                    to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or
+                    one
+                    who avoids a pain
+                    that produces no resultant pleasure?"</p>
+            </section>
+            <section id="Section_Hacking" class="main-section">
+                <header>Section Hacking</header>
+                <p>Afsnit 1.10.33 fra "de Finibus Bonorum et Malorum", skrevet af Cicero i 45 f.kr.
+                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum
+                    deleniti atque
+                    corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                    similique
+                    sunt in culpa qui
+                    officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+                    est
+                    et expedita
+                    distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                    minus
+                    id quod maxime
+                    placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                    quibusdam et aut
+                    officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+                    molestiae non recusandae.
+                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+                    consequatur aut
+                    perferendis doloribus asperiores repellat."</p>
+                <li></li>
+                <code>
+
+                </code>
+                <p>1914-oversættelsen af Rackham
+                    "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+                    and
+                    demoralized by the
+                    charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and
+                    trouble that are bound to
+                    ensue; and equal blame belongs to those who fail in their duty through weakness of will, which
+                    is
+                    the same as saying
+                    through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                    In a
+                    free hour, when our
+                    power of choice is untrammelled and when nothing prevents our being able to do what we like
+                    best,
+                    every pleasure is to
+                    be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty
+                    or
+                    the obligations of
+                    business it will frequently occur that pleasures have to be repudiated and annoyances accepted.
+                    The
+                    wise man therefore
+                    always holds in these matters to this principle of selection: he rejects pleasures to secure
+                    other
+                    greater pleasures, or
+                    else he endures pains to avoid worse pains."</p>
+            </section>
+        </main>
+
+        <h1>Main title</h1>
+        <p>Introduction</p>
+        <h2>Reasons</h2>
+        <h3>Reason 1</h3>
+        <p>Par
+        <pre>HELLO</pre>agraph</p>
+        <h3>Reason 2</h3>
+        <p>Here is some content from an article that contains the <mark>searched query</mark>
+            that we are looking for. <strong>sTRoNG</strong>Highlighting the <b>Bold</b>text <em>Italics</em> will make
+            <i>Italics </i>it easier for the user to
+            find what <u>they</u> are looking for.
+        </p>
+        <p>I like to write abreviated titles in <abbr title="Hypertext Markup Language">HTML</abbr>!</p> I've
+        <ins>Inserted</ins> text here, <del>Deleted</del> text here, and <s>Struck Through</s> text over here.
+        <p>This is what <sup>Superscript</sup> looks like, and this is what <sub>Subscript</sub> looks like.</p>
+
+        <h2>In conclusion</h2>
+        <p>Paragraph</p>
+        <div class="sb-input-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" placeholder="Search" />
+            <div class="fa fa-times"></div>
+        </div>
+        <div>
+            <input type="text" class="btn seventy">
+        </div>
+    -->
+    </body>
+
+</html>

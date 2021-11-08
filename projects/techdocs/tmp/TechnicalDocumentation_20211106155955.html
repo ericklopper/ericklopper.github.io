@@ -3,7 +3,7 @@
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
     <head>
-        <title class="title">
+        <title>
             Technical Documentation
         </title>
         <!-- Link Style imports the main CSS stylesheet -->
@@ -21,56 +21,51 @@
 
     <body>
         <nav id="navbar" class="">
-            <header id="docuhead">Linux File Manager Commands:</header>
-            <a href="#the_LS_command" class="nav-link NavLS nactive">the LS command</a>
-            <a href="#the_LN_command" class="nav-link NavLN nactive">the LN command</a>
-            <a href="#the_MV_command" class="nav-link NavMV nactive">the MV command</a>
-            <a href="#the_MKDIR_command" class="nav-link NavMKDIR nactive">the MKDIR command</a>
-            <a href="#the_RM_command" class="nav-link NavRM nactive">the RM command</a>
-            <a href="#the_RMDIR_command" class="nav-link NavRMDIR nactive">the RMDIR command</a>
+            <header id="docuhead">Some Basic Linux File Manager Commands:</header>
+            <a href="#the_LS_command" class="NavLS">the LS command:</a>
+            <a href="#the_LN_command" class="NavLN">the LN command:</a>
+            <a href="#the_MV_command" class="NavMV">the MV command:</a>
+            <a href="#the_MKDIR_command" class="NavMKDIR">the MKDIR command:</a>
+            <a href="#the_RM_command" class="NavRM">the RM command:</a>
+            <a href="#the_RMDIR_command" class="NavRMDIR">the RMDIR command:</a>
+            <a href="#the_CHMOD_command" class="NavCHMOD">the CHMOD command:</a>
+            <a href="#the_CHOWN_command" class="NavCHOWN">the CHOWN command:</a>
+            <a href="#the_FILE_command" class="NavMV">the FILE command:</a>
+
         </nav>
         <main id="main-doc">
             <!--  The LS Command  -----------------------  BEGIN  -->
             <section id="the_LS_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"> </div>
-                    <div class="lshd">the LS command</div>
-                    <div class="lnhd"> </div>
-                    <div class="mvhd"> </div>
-                    <div class="mkdirhd"> </div>
-                    <div class="rmhd"> </div>
-                    <div class="rmdirhd"> </div>
-                </header>
-                <p class="topspace">The ls command is used to list directory contents. See the examples of it usage
-                    below.</p>
+                <h2>the LS command</h2>
+                <p>The ls command is used to list directory contents. See the examples of it usage below.</p>
                 <ul>
                     <li>
                         <h3>ls</h3>
                         <p>List directory contents</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls
 bin dev home initrd.img.old lib32 libx32 media opt root sbin sys usr vmlinuz
 boot etc initrd.img lib lib64 lost+found mnt proc run srv tmp var vmlinuz.old
-                    </code></pre>
+                    </pre>
                     </li>
                     <li>
                         <h3>ls -a</h3>
                         <p>List directory contents, inclduing hidden . files</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls -a
 . boot etc initrd.img.old lib64 media proc sbin tmp vmlinuz
 .. .cache home lib libx32 mnt root srv usr vmlinuz.old
 bin dev initrd.img lib32 lost+found opt run sys var
-                    </code></pre>
+                    </pre>
                     </li>
                     <li>
                         <h3>ls -l</h3>
                         <p>Long list of directory contents</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls -l
@@ -101,7 +96,7 @@ drwxr-xr-x 14 root root 4096 Sep 8 05:21 usr
 drwxr-xr-x 12 root root 4096 Sep 8 05:22 var
 lrwxrwxrwx 1 root root 31 Sep 8 05:21 vmlinuz -> boot/vmlinuz-5.10.0-kali9-amd64
 lrwxrwxrwx 1 root root 31 Sep 8 05:21 vmlinuz.old -> boot/vmlinuz-5.10.0-kali9-amd64
-                            </code></pre>
+                            </pre>
                     </li>
                 </ul>
             </section>
@@ -109,23 +104,14 @@ lrwxrwxrwx 1 root root 31 Sep 8 05:21 vmlinuz.old -> boot/vmlinuz-5.10.0-kali9-a
 
             <!--  The LN Command  -------------------------BEGIN  -->
             <section id="the_LN_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"> </div>
-                    <div class="lshd"> </div>
-                    <div class="lnhd">the LN command</div>
-                    <div class="mvhd"> </div>
-                    <div class="mkdirhd"> </div>
-                    <div class="rmhd"> </div>
-                    <div class="rmdirhd"> </div>
-                </header>
-                <p class="topspace">The ln command is used to create links between files. See the examples of its usage
-                    below:</p>
+                <h2>the LN command</h2>
+                <p>The ln command is used to create links between files. See the examples of its usage below:</p>
                 <ul>
                     <li>
                         <h3>ln -s</h3>
                         <p>Creates a symbolic(soft) link(pointer) to a file. If the file is deleted the link stops
                             working.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[~]
 └─$ ln -s Documents/myfile.txt .
@@ -147,13 +133,13 @@ cat: myfile.txt: No such file or directory
 
 ┌──(kali㉿aBANANA)-[~]
 └─$
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>ln -P file1.txt filetwo.txt</h3>
                         <p>Make a hard link called 'filetwo.txt' to the underlying INODE entry for the file
                             'file1.txt'. If 'file1.txt' is deleted, 'file2.txt' will still contiue working.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ touch tmp/myfile.txt
@@ -183,7 +169,7 @@ aBANANA
 ┌──(kali㉿aBANANA)-[/]
 └─$
 
-                        </code></pre>
+                        </pre>
                     </li>
                 </ul>
             </section>
@@ -191,23 +177,14 @@ aBANANA
 
             <!--  The MV Command  -------------------------BEGIN  -->
             <section id="the_MV_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"></div>
-                    <div class="lshd"></div>
-                    <div class="lnhd"></div>
-                    <div class="mvhd">the MV command</div>
-                    <div class="mkdirhd"></div>
-                    <div class="rmhd"></div>
-                    <div class="rmdirhd"></div>
-                </header>
-                <p class="topspace">The mv command is used for the purposes of moving files between locations, as well
-                    as in the place of
+                <h2>the MV command</h2>
+                <p>The mv command is used for the purposes of moving files between locations, as well as in the place of
                     the 'Rename' command used in Windows for the renaming of files. See examples of its usage below:</p>
                 <ul>
                     <li>
                         <h3>mv locationone/file.txt locationtwo/file.txt</h3>
                         <p>Move file.txt from Source to Destination directory.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 ┌──(kali㉿aBANANA)-[/]
 └─$ touch tmp/myfile.txt
 
@@ -224,12 +201,12 @@ boot etc initrd.img lib lib64 lost+found mnt proc run srv tmp var vmlinuz.old
 bin etc initrd.img.old lib64 media opt run sys var
 boot home lib libx32 mnt proc sbin tmp vmlinuz
 dev initrd.img lib32 lost+found <span class="highlighted">myfile.txt</span> root srv usr vmlinuz.old
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>mv firstfilename.txt secondfilename.txt</h3>
                         <p>Rename the SOURCE filename to DESTINATION filename.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls
 bin etc initrd.img.old lib64 media opt run sys var
@@ -248,7 +225,7 @@ dev initrd.img lib32 lost+found <span class="highlighted">myotherfile.txt</span>
 ┌──(kali㉿aBANANA)-[/]
 └─$
 
-                        </code></pre>
+                        </pre>
                     </li>
                 </ul>
             </section>
@@ -256,49 +233,40 @@ dev initrd.img lib32 lost+found <span class="highlighted">myotherfile.txt</span>
 
             <!--  The MKDIR Command  ----------------------BEGIN  -->
             <section id="the_MKDIR_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"></div>
-                    <div class="lshd"></div>
-                    <div class="lnhd"></div>
-                    <div class="mvhd"></div>
-                    <div class="mkdirhd">the MKDIR command</div>
-                    <div class="rmhd"></div>
-                    <div class="rmdirhd"></div>
-                </header>
-                <p class="topspace">The mkdir command is used to create directories in the linux file system, if they do
-                    not already
+                <h2>the MKDIR command</h2>
+                <p>The mkdir command is used to create directories in the linux file system, if they do not already
                     exist. See examples of its usage
                     below:</p>
                 <ul>
                     <li>
                         <h3>mkdir /tmp/dirone</h3>
                         <p>Create a single directory called 'dirone' in the tmp/ directory.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ mkdir /tmp/dirone
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>mkdir /tmp/dirtwo /tmp/dirthree /tmp/dirfour</h3>
                         <p>More than one directory is created under the tmp/ directory with a single command.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ mkdir /tmp/dirtwo /tmp/dirthree /tmp/dirfour
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>mkdir -p /tmp/dirfive/dirsix/dirseven</h3>
                         <p>Adding the -p option to the mkdir commands allow for the creating directories, in
                             directories, in directories, etc.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ mkdir -p /tmp/dirfive/dirsix/dirseven
-                        </code></pre>
+                        </pre>
                         <p>List of the created directories in the tmp/ directory:</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls -R /tmp/dir*
 /tmp/dirfive:
@@ -316,7 +284,7 @@ dirseven
 /tmp/dirthree:
 
 /tmp/dirtwo:
-                        </code></pre>
+                        </pre>
                     </li>
                 </ul>
             </section>
@@ -324,23 +292,14 @@ dirseven
 
             <!--  The RM Command  -------------------------BEGIN  -->
             <section id="the_RM_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"></div>
-                    <div class="lshd"></div>
-                    <div class="lnhd"></div>
-                    <div class="mvhd"></div>
-                    <div class="mkdirhd"></div>
-                    <div class="rmhd">the RM command</div>
-                    <div class="rmdirhd"></div>
-                </header>
-                <p class="topspace">The rm command is used to remove files from the system. It does not, unless
-                    specified, remove
+                <h2>the RM command</h2>
+                <p>The rm command is used to remove files from the system. It does not, unless specified, remove
                     directories. See examples of its usage below:</p>
                 <ul>
                     <li>
                         <h3>rm /tmp/myfile.txt</h3>
                         <p>The single file, myfile.txt, is deleted from the tmp/ directory.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls /tmp/myfile.txt
@@ -352,13 +311,13 @@ dirseven
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls /tmp/myfile.txt
 ls: cannot access '/tmp/myfile.txt': No such file or directory
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>rm /tmp/myfileone.txt /tmp/myfiletwo.txt /tmp/myfilethree.txt</h3>
                         <p>With a single command multiple files, myfileone.txt/myfiletwo.txt/myfilethree.txt, can be
                             deleted.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ touch tmp/myfile{one,two,three}.txt
@@ -373,13 +332,13 @@ ls: cannot access '/tmp/myfile.txt': No such file or directory
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls /tmp/myfile*
 ls: cannot access '/tmp/myfile*': No such file or directory
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>rm -rf /tmp/dirone/</h3>
                         <p>Normally the rm command is unable to delete directories, but with the -rf option added it
                             deletes the directory, with all subdirectories and files therein.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ rm /tmp/dirone/
@@ -391,7 +350,7 @@ rm: cannot remove '/tmp/dirone/': Is a directory
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls /tmp/dirone/
 ls: cannot access '/tmp/dirone/': No such file or directory
-                        </code></pre>
+                        </pre>
                     </li>
                 </ul>
             </section>
@@ -399,17 +358,8 @@ ls: cannot access '/tmp/dirone/': No such file or directory
 
             <!--  The RMDIR Command  ----------------------BEGIN  -->
             <section id="the_RMDIR_command" class="main-section">
-                <header class="hdrm">
-                    <div class="tophd"> </div>
-                    <div class="lshd"> </div>
-                    <div class="lnhd"> </div>
-                    <div class="mvhd"> </div>
-                    <div class="mkdirhd"> </div>
-                    <div class="rmhd"> </div>
-                    <div class="rmdirhd">the RMDIR command</div>
-                </header>
-                <p class="topspace">The rmdir command is used to delete directories if the are empty. See exmaples of
-                    its usage below:
+                <h2>the RMDIR command</h2>
+                <p>The rmdir command is used to delete directories if the are empty. See exmaples of its usage below:
                 </p>
                 <ul>
                     <li>
@@ -417,7 +367,7 @@ ls: cannot access '/tmp/dirone/': No such file or directory
                         <p>Remove all directories starting with the letters 'dir' in the tmp/ directory. This does not
                             work with sub directories, so only the directories starting with 'dir' in the name, that
                             does not have subdirectories, are successfully deleted.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls /tmp/dir*
@@ -433,13 +383,13 @@ dirsix
 ┌──(kali㉿aBANANA)-[/]
 └─$ rmdir /tmp/dir*
 rmdir: failed to remove '/tmp/dirfive': Directory not empty
-                        </code></pre>
+                        </pre>
                     </li>
                     <li>
                         <h3>rmdir -p /tmp/dirfive/dirsix/dirseven/</h3>
                         <p>By adding the -p option to the rmdir command a full directory patth can be deleted. Note that
                             this cannot be used to delete all subdirectories of a directory.</p>
-                        <pre class="code"><code>
+                        <pre class="code">
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ ls -R /tmp/dirfive
@@ -453,11 +403,69 @@ dirseven
 
 ┌──(kali㉿aBANANA)-[/]
 └─$ rmdir /tmp/dirfive/dirsix/dirseven
-                        </code></pre>
+                        </pre>
                     </li>
                 </ul>
             </section>
             <!--  The RMDIR Command  ------------------------END  -->
+
+            <!--  The CHMOD Command  ----------------------BEGIN  -->
+            <section id="the_CHMOD_command" class="main-section">
+                <h2>the CHMOD command</h2>
+                <p>The chmod (change mode) command is used to manage file system access permissions. See examples of its
+                    usage below:</p>
+                <ul>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                </ul>
+            </section>
+            <!--  The CHMOD Command  ------------------------END  -->
+
+            <!--  The CHOWN Command  ----------------------BEGIN  -->
+            <section id="the_CHOWN_command" class="main-section">
+                <h2>the CHOWN command</h2>
+                <p>The chown command changes the owner of the file or directory specified by the File or Directory
+                    parameter to the user specified by the Owner parameter.</p>
+                <ul>
+                    <li>
+                        <pre class="cod"></pre>
+                    </li>
+                    <li>
+                        <pre class="cod"></pre>
+                    </li>
+                    <li>
+                        <pre class="cod"></pre>
+                    </li>
+                </ul>
+            </section>
+            <!--  The CHOWN Command  ------------------------END  -->
+
+            <!--  The FILE Command  -----------------------BEGIN  -->
+            <section id="the_FILE_command" class="main-section">
+                <h2>the FILE command</h2>
+                <p>The file command is a standard program of Unix and Unix-like operating systems for recognizing the
+                    type of data contained in a computer file.</p>
+                <ul>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                    <li>
+                        <pre class="code"></pre>
+                    </li>
+                </ul>
+            </section>
+            <!--  The FILE Command  -----------------------END  -->
+
     </body>
 
 </html>

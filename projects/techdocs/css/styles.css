@@ -4,12 +4,32 @@
 /* Variables */
 
 :root {
+    --back-color: #E6E1E7;
     --primary-color: #50330C;
     --accent-color: #68BA84;
+    --primone-color: #eae4e9;
+    --accone-color: #6e6a6e;
+    --primtwo-color: #fff1e6;
+    --acctwo-color: #7e756e;
+    --primthree-color: #fde2e4;
+    --accthree-color: #7e6d6e;
+    --primfour-color: #fad2e1;
+    --accfour-color: #7e6770;
+    --primfive-color: #e2ece9;
+    --accfive-color: #71807b;
+    --primsix-color: #bee1e6;
+    --accsix-color: #667072;
+    --primseven-color: #cddafd;
+    --accseven-color: #585f74;
     --offwhite-color: #F8F8F8;
+    --otherwhite-color: #f0efeb;
     --white-color: #FFFFFF;
-    --text-color: #939393;
-    --font-main: 'Poppins', sans-serif;
+    --text-color: rgb(59, 59, 59);
+    --edge-color: #26252A;
+    --codebg-color: #d9e8ec;
+    --codeFont-color: #004555;
+    --codeEdge-color: #3D7687;
+    --font-main: 'Raleway', sans-serif;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -17,253 +37,224 @@
 
 /* Global */
 
-* {
-    font-family: "Cinzel";
-}
-
-/* Button */
-
-.btn {
-    display: block;
-    padding: 25px 40px;
-    text-align: center;
-    min-width: 140px;
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: var(--font-weight-medium);
-    color: var(--white-color);
-    background: var(--accent-color);
-    transition: 0.4s all ease-in-out;
-}
-
-@media (hover: hover) {
-    .btn:hover {
-        background: var(--primary-color);
-    }
-}
-
-.btn-wrap {
-    display: flex;
-    margin-top: 30px;
-}
-
-/* Typography */
-
-body {
+html, body {
+    min-width: auto;
+    background-color: var(--offwhite-color);
+    color: var(--text-color);
     font-family: var(--font-main);
 }
 
-h1 {
-    font-size: 43px;
-    line-height: 51px;
-    letter-spacing: 0;
-    color: var(--primary-color);
-    font-weight: var(--font-weight-semibold);
+h2 {
+    font-size: 1.25rem;
 }
 
-h2 {
-    font-size: 33px;
-    line-height: 45px;
-    letter-spacing: 0;
-    color: var(--primary-color);
-    font-weight: var(--font-weight-semibold);
-}
+h3 {}
 
 p {
-    font-size: 14px;
-    line-height: 30px;
-    letter-spacing: 0;
-    color: var(--text-color);
-    font-weight: var(--font-weight-light);
+    font-size: .9rem;
 }
 
-/* Responsive - Medium Tablet */
-
-@media only screen and (max-width: 991px) {
-    h1 {
-        font-size: 32px;
-        line-height: 42px;
-    }
+.code {
+    background-color: var(--codebg-color);
+    color: var(--codeFont-color);
+    border: 1px solid var(--codeEdge-color);
+    padding: 2px 10px 2px 10px;
+    font-size: .9rem;
+    border-radius: 3px;
+    width: auto;
+    overflow: auto;
+    height: auto;
+    align-items: flex-start;
 }
 
-/* 3. Ready Classes */
-
-/* Flexbox Ready Classes */
-
-.flex {
-    display: flex;
-}
-
-.flex-sb {
-    justify-content: space-between;
-}
-
-.flex-ac {
+#docuhead {
+    height: 3rem;
     align-items: center;
+    justify-content: center;
+    padding: 0px 5px 0px 15px;
+    font-size: 1.25rem;
 }
 
-.flex-jc {
+/* Navigation */
+
+#navbar {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: var(--otherwhite-color);
+}
+
+#navbar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: block;
+}
+
+#navbar a:hover:active {
+    color: var(--accseven-color);
+    background-color: var(--primseven-color);
+}
+
+#navbar a:active {
+    color: blue;
+    text-decoration: underline;
+}
+
+#main-doc {
+    margin-left: 250px;
+}
+
+.NavLS {
+    background-color: var(--primone-color);
+    color: var(--accone-color);
+}
+
+.NavLN {
+    background-color: var(--primtwo-color);
+    color: var(--acctwo-color);
+}
+.NavMV {
+    background-color: var(--primthree-color);
+    color: var(--accthree-color);
+}
+.NavMKDIR {
+    background-color: var(--primfour-color);
+    color: var(--accfour-color);
+}
+.NavRM {
+    background-color: var(--primfive-color);
+    color: var(--accfive-color);
+}
+.NavRMDIR {
+    background-color: var(--primsix-color);
+    color: var(--accsix-color);
+}
+/* #navbar #File_Management a {
+    background-color: var(--primone-color);
+} */
+
+.hdrm {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    top: 0;
+    left: 0;
+    height: 12rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+.tophd {
+    height: 3rem;
+    width: auto;
+    background-color: var(--otherwhite-color);
+    color: var(--accseven-color);
+    align-items: center;
     justify-content: center;
 }
 
-.flex-ae {
-    align-items: flex-end;
+.lshd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primone-color);
+    color: var(--accone-color);
 }
 
-.flex-je {
-    justify-content: flex-end;
+.lnhd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primtwo-color);
+    color: var(--acctwo-color);
 }
 
-.flex-col {
-    flex-direction: column;
+.mvhd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primthree-color);
+    color: var(--accthree-color);
 }
 
-.flex-wrap {
-    flex-wrap: wrap;
+.mkdirhd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primfour-color);
+    color: var(--accfour-color);
 }
 
-/* Width Ready Classes */
-
-/* 20% wide */
-
-.twenty {
-    width: 20%;
+.rmhd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primfive-color);
+    color: var(--accfive-color);
 }
 
-/* 25% wide */
-
-.twenty-five {
-    width: 25%;
+.rmdirhd {
+    padding: 6px 8px 6px 16px;
+    height: 1.5rem;
+    width: auto;
+    background-color: var(--primsix-color);
+    color: var(--accsix-color);
 }
 
-/* 30% wide */
 
-.thirty {
-    width: 30%;
+.FM {
+    background-color: var(--primone-color);
+    color: var(--accone-color);
 }
 
-/* 35% wide */
-
-.thirty-five {
-    width: 35%;
+.FM a {
+    background-color: var(--primone-color);
+    color: var(--accone-color);
 }
 
-/* 40% wide */
-
-.forty {
-    width: 40%;
+.highlighted {
+    background-color: rgba(255, 255, 2, 0.342);
 }
 
-/* 45% wide */
-
-.forty-five {
-    width: 45%;
+.topspace {
+    margin-top: 90px;
+    margin-left: 10px;
+    font-size: 1rem;
 }
 
-/* 50% wide */
-
-.fifty {
-    width: 50%;
+.nactive:active {
+    color: red;
 }
 
-/* 55% wide */
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
 
-.fifty-five {
-    width: 55%;
 }
 
-/* 60% wide */
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
 
-.sixty {
-    width: 60%;
 }
 
-/* 70% wide */
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
 
-.seventy {
-    width: 70%;
-}
-
-/* 75% wide */
-
-.seventy-five {
-    width: 75%;
-}
-
-/* 80% wide */
-
-.eighty {
-    width: 80%;
-}
-
-/* 100% wide */
-
-.full {
-    width: 100%;
-}
-
-/* Containers */
-
-.container {
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 100px 50px;
-}
-
-.container-large {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-@media only screen and (max-width: 1070px) {
-    .container {
-        padding: 50px 20px;
-    }
-    .container-large {
-        padding: 0 20px;
-    }
-}
-
-/* Background Colors */
-
-.bg-white {
-    background: var(--white-color);
-}
-
-.bg-offwhite {
-    background: var(--offwhite-color);
-}
-
-.bg-primary {
-    background: var(--primary-color)
-}
-
-.bg-accent {
-    background: var(--accent-color);
-}
-
-/* Text Colors */
-
-.tc-wht {
-    color: var(--white-color);
-}
-
-.tc-prim {
-    color: var(--primary-color);
-}
-
-.tc-acc {
-    color: var(--accent-color);
-}
-
-/* Text Alignment */
-
-.ta-center {
-    text-align: center;
-}
-
-.ta-right {
-    text-align: right;
 }
