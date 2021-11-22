@@ -1,0 +1,234 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@300;400&family=Poiret+One&family=Quicksand:wght@300;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@100;300&display=swap');
+/* ------------------------------------------------------------ */
+
+.wrapper .button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 0 5px;
+    overflow: hidden;
+    font-family: "Roboto";
+    background: #FFF;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+
+.wrapper .button:nth-child(1) { /* Facebook */
+    color: #4267B2;
+}
+
+.wrapper .button:nth-child(2) { /* Twitter */
+    color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3) { /* YouTube */
+    color: #C4302B;
+}
+
+.wrapper .button:nth-child(4) { /* Linkedin */
+    color: #0E76A8;
+}
+
+.wrapper .button:nth-child(5) { /* Instagram */
+    color: #833AB4;
+}
+
+.wrapper .button:nth-child(6) { /* WhatsApp */
+    color: #25D366;
+}
+
+.wrapper .button:nth-child(7) { /* Spotify */
+    color: #1ED761;
+}
+
+.wrapper .button:nth-child(8) { /* Telegram */
+    color: #0088CC;
+}
+
+.wrapper .button:nth-child(9) { /* Reddit */
+    color: #FF4500;
+}
+
+.wrapper .button:nth-child(10) { /* Pinterest */
+    color: #BD081C;
+}
+
+.wrapper .button:nth-child(11) { /* Medium */
+    color: #02B875;
+}
+
+.wrapper .button:nth-child(12) { /* Discord */
+    color: #5865F2;
+}
+
+.wrapper .button:nth-child(13) { /* Quora */
+    color: #AA2200;
+}
+
+.wrapper .button:nth-child(14) { /* Google+ */
+    color: #DB4437;
+}
+
+.wrapper .button:nth-child(15) { /* eMail */
+    color: #000981;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon { /* Facebook */
+    background: #4267B2;
+}
+
+.wrapper .button:nth-child(2):hover .icon { /* Twitter */
+    background: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3):hover .icon { /* YouTube */
+    background: #C4302B;
+}
+
+.wrapper .button:nth-child(4):hover .icon { /* Linkedin */
+    background: #0E76A8;
+}
+
+.wrapper .button:nth-child(5):hover .icon { /* Instagram */
+    background: #833AB4;
+}
+
+.wrapper .button:nth-child(6):hover .icon { /* WhatsApp */
+    background: #25D366;
+}
+
+.wrapper .button:nth-child(7):hover .icon { /* Spotify */
+    background: #1ED761;
+}
+
+.wrapper .button:nth-child(8):hover .icon { /* Telegram */
+    background: #0088CC;
+}
+
+.wrapper .button:nth-child(9):hover .icon { /* Reddit */
+    background: #FF4500;
+}
+
+.wrapper .button:nth-child(10):hover .icon { /* Pinterest */
+    background: #BD081C;
+}
+
+.wrapper .button:nth-child(11):hover .icon { /* Medium */
+    background: #02B875;
+}
+
+.wrapper .button:nth-child(12):hover .icon { /* Discord */
+    background: #5865F2;
+}
+
+.wrapper .button:nth-child(13):hover .icon { /* Quora */
+    background: #AA2200;
+}
+
+.wrapper .button:nth-child(14):hover .icon { /* Google+ */
+    background: #DB4437;
+}
+
+.wrapper .button:nth-child(15):hover .icon { /* eMail */
+    background: #000981;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #FFF;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span { /* Facebook */
+    color: #4267B2;
+}
+
+.wrapper .button:nth-child(2) span { /* Twitter */
+    color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3) span { /* YouTube */
+    color: #C4302B;
+}
+
+.wrapper .button:nth-child(4) span { /* Linkedin */
+    color: #0E76A8;
+}
+
+.wrapper .button:nth-child(5) span { /* Instagram */
+    color: #833AB4;
+}
+
+.wrapper .button:nth-child(6) span { /* WhatsApp */
+    color: #25D366;
+}
+
+.wrapper .button:nth-child(7) span { /* Spotify */
+    color: #1ED761;
+}
+
+.wrapper .button:nth-child(8) span { /* Telegram */
+    color: #0088CC;
+}
+
+.wrapper .button:nth-child(9) span { /* Reddit */
+    color: #FF4500;
+}
+
+.wrapper .button:nth-child(10) span { /* Pinterest */
+    color: #BD081C;
+}
+
+.wrapper .button:nth-child(11) span { /* Medium */
+    color: #02B875;
+}
+
+.wrapper .button:nth-child(12) span { /* Discord */
+    color: #5865F2;
+}
+
+.wrapper .button:nth-child(13) span { /* Quora */
+    color: #AA2200;
+}
+
+.wrapper .button:nth-child(14) span { /* Google+ */
+    color: #DB4437;
+}
+
+.wrapper .button:nth-child(15) span { /* eMail */
+    color: #000981;
+}
